@@ -29,7 +29,7 @@ Servlet은 웹 요청마다 하나의 thread로 동작하는데, Spring Security
 
 인증된 객체의 정보를 접근하는 방법은 3가지 정도 있다. 
 
-1. SecurityContextHolder (비추천 방법)
+1. SecurityContextHolder (흔히 쓰이지는 않음)
 ```java
 SecurityContext context = SecurityContextHolder.getContext();
 Authentication authentication = context.getAuthentication();
