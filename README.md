@@ -11,7 +11,7 @@ Servlet 기반으로 구동되는 웹서비스는 인증, 인가, 변환, 압축
 ## Spring Security
 ![filter-chain-proxy.png](resources/filter-chain-proxy.png)
 
-Spring Security는 Filter를 구현하는 FilterChainProxy를 제공하는데, 이 프록시는 내부적으로 FilterChain이라는 Filter 복합체 여러개를 갖는다. 각 FilterChain은 또 많은 Filter를 가지면서 depth 3이 되어 꽤 복잡한 구조가 된다. 
+Spring Security는 Filter를 구현하는 FilterChainProxy를 제공하는데, 이 프록시는 내부적으로 FilterChain이라는 Filter 복합체 여러개를 가지며 FilterChain 한 개는 많은 Filter를 가진다.  
 
 ```java
 public interface SecurityFilterChain {
@@ -19,7 +19,7 @@ public interface SecurityFilterChain {
     List<Filter> getFilters();
 }
 ```
-위 SecurityFilterChain 인터페이스를 보면 인입된 HttpServletRequest 요청을 분석하여 지원할 수 있는지(matches) 확인할 수 있다. FilterChainProxy는 여러 filterChain 중 매칭이 되는 첫 번째 chain의 Filter들을 수행한다. 
+FilterChainProxy는 가지고 있는 FilterChain 중 현재 웹 요청(HttpServletRequest)을 지원하는 첫 번째 chain의 Filter들을 수행한다. SecurityFilterChain interface의 matches 메서드를 이용해서다. 
 
 우리는 Spring Security에서 기본적으로 제공하는 FilterChain 모음 외에 커스텀 FilterChain을 추가하여 서비스의 보안 요구사항을 만족시키는 작업을 해야한다.
 
