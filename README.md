@@ -1,9 +1,10 @@
 # Spring Security Basic Practice
-Spring Security는 인증(Authentication) 및 인가(Authorization)를 담당하는 스프링 프레임워크이다. 본 블로깅에서는 Spring Security의 기초 개념을 공부하고 실습한다.
-
-## Chat GPT에게 물어봤다.
-누군가 Spring Security가 뭐냐고 물어본다면 아래처럼 말하면 될 것 같다. (대단;;) 
+Spring Security는 인증(Authentication) 및 인가(Authorization)를 담당하는 스프링 프레임워크이다.
+먼저 ChatGPT에게 Spring Security에 대해 물어봤는데 정확하고 상세하게 대답해줘서 놀랐다.
 ![chatgpt-what-is-spring-security.png](resources/chatgpt-what-is-spring-security.png)
+
+누군가 Spring Security에 대해 물어본다면 ChatGPT처럼 말하면 아주 좋을 것 같다. (대단;;)
+이번 블로깅에서는 Spring Security의 기초 구조에 대해 정리해보려고 한다.
 
 ## Basic Web Security
 ![web-security.png](resources/web-security.png)
